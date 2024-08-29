@@ -1,0 +1,36 @@
+<div class="calendar-container">
+  <div class="calendar-header">
+    <button mat-icon-button (click)="prevMonth()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <h1>{{ currentMonth | date: 'MMMM yyyy' }}</h1>
+    <button mat-icon-button (click)="nextMonth()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+    <button mat-raised-button color="primary" (click)="openFormDialog()">Add Appointment</button>
+  </div>
+
+  <div class="calendar-grid">
+    <div class="calendar-day" *ngFor="let day of days" (click)="selectDate(day)">
+      <div class="calendar-date">{{ day | date: 'd' }}</div>
+      <div cdkDropList [cdkDropListData]="day" (cdkDropListDropped)="onDrop($event)">
+        <div *ngFor="let appointment of filteredAppointments(day)" cdkDrag [cdkDragData]="appointment">
+          <mat-card>
+            <mat-card-title>{{ appointment.title }}</mat-card-title>
+            <mat-card-subtitle>{{ appointment.date | date: 'shortDate' }}</mat-card-subtitle>
+            <mat-card-content>
+              <p>{{ appointment.description }}</p>
+              <button mat-button color="warn" (click)="deleteAppointment(appointment)">Delete</button>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recent-appointments">
+    <app-appointment-list [appointments]="recentAppointments"></app-appointment-list>
+  </div>
+</div>
+
+<app-appointment-form *ngIf="isFormVisible" (formSubmitted)="onFormSubmitted($event)"></app-appointment-form>

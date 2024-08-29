@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="appointment.title" name="title" placeholder="Title" required>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="appointment.description" name="description" placeholder="Description"></textarea>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Time</mat-label>
+    <input matInput [ngxTimepicker]="timePicker" [(ngModel)]="appointment.time" name="time" placeholder="Time" required>
+    <ngx-material-timepicker #timePicker></ngx-material-timepicker>
+  </mat-form-field>
+
+  <div class="form-buttons">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-button (click)="onCancel()">Cancel</button>
+  </div>
+</form>

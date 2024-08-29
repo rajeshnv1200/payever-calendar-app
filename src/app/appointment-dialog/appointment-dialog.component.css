@@ -1,0 +1,18 @@
+.timer-popup,.time-selection,.timepicker,.timer-popup {
+    position: absolute;
+    z-index: 600; /* Ensure this is higher than other elements on the page */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  app-appointment{
+    position: absolute;
+    z-index: 300; /* Ensure this is higher than other elements on the page */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }

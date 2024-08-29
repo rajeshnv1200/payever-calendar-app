@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title>Appointments Today</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let appointment of appointments">
+        <mat-icon matListIcon>event</mat-icon>
+        <h4 matLine>{{ appointment.title }}</h4>
+        <p matLine>{{ appointment.date | date: 'fullDate' }} - {{ appointment.date | date: 'shortTime' }}</p>
+        <button mat-icon-button color="primary" (click)="editAppointment(appointment)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteAppointment(appointment)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+      <mat-divider *ngIf="!appointments.length"></mat-divider>
+      <p *ngIf="!appointments.length" class="no-appointments">No appointments available</p>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

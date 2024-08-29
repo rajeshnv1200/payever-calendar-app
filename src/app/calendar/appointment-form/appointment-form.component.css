@@ -1,0 +1,159 @@
+:host {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 500;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.mat-card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-card-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mat-card-subtitle {
+    color: #757575;
+}
+
+
+mat-card {
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+mat-card-header {
+    background-color: #3f51b5;
+    color: white;
+}
+
+mat-card-title {
+    font-size: 20px;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    margin-top: 16px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-dialog-content {
+    padding: 20px;
+}
+
+mat-dialog-actions {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+mat-form-field {
+    width: 100%;
+
+    margin-bottom: 16px;
+}
+
+mat-form-field mat-label {
+    font-size: 14px;
+    color: #333;
+}
+
+mat-form-field input,
+mat-form-field textarea {
+    font-size: 14px;
+    color: #333;
+}
+
+mat-dialog-content {
+    padding: 20px;
+}
+
+mat-dialog-actions {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button[mat-button] {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+button {
+    margin-top: 16px;
+}
+
+form {
+    position: relative;
+}
+
+
+ngx-material-timepicker {
+    z-index: 1000;
+}
+
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+button {
+    margin-top: 16px;
+}
+
+::ng-deep .ngx-material-timepicker-container {
+    z-index: 2000 !important;
+}
+
+
+.appointment-form {
+    position: relative;
+    z-index: 1000;
+}
+
+.timepicker__main-content, .custom-dialog-container {
+    z-index: 999999  }
+  
